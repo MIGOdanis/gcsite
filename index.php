@@ -1,6 +1,7 @@
 <?php
 if(!isset($_POST['UFS'])){
 ?>
+<meta charset='utf-8'>
 <form action="" method="post">
 　UNMODIFIED FORWARD SEQUENCE<br>
 　<textarea name="UFS" cols="150" rows="40"></textarea><br>
@@ -39,57 +40,7 @@ if(!isset($_POST['UFS'])){
 			}
 		}
 	}
-	///////////
-	// 	$partNum = ($length/100);
-	// 	$partNumN2 =  number_format($partNum, 2);
-	// 	$partNumNp =  explode('.', $partNumN2);
-	// 	$partNumNp =  ($partNumNp[1]/100;
-	// 	$partPx = (800/$partNum);
-	// 	$lastPartPx = $partPx * $partNumN2 ;
-	// 	$tens = (int)$partNum - ((int)$partNum % 10);
-	// 	$sx = (20 + $partPx);
-	// 	$sy = $footY;
-	// 	$ex = (20 + $partPx);
-	// 	$ey = ($footY-10);
-	// 	//echo ($partNumNp[1]/100); exit;
-	// 	//頭尾數量
-	// 	//imagettftext($im, 15, 0, 20, ($footY-20), $color, $font, 0);
-	// 	//imagettftext($im, 15, 0, 800, ($footY-20), $color, $font, $length);
-	// 	echo $partNum."<br>";
-	// 	echo $ex."<br>";
-	// 	for($r=1;$r <= $partNum ;$r++){
 
-	// 		if ($r == ($tens/2) || $r == $tens){
-	// 			//imagettftext($im, 15, 0, $sx-($partPx/2), ($footY-30), $color, $font, ($r*100));
-	// 			$ey = ($footY-20);
-	// 		}
-	// 		if($r == (int)$partNum)
-	// 			$ey = ($footY+10);
-	// 		//imageline($im, $sx, $sy, $ex, $ey, $color);
-	// 		$dsx = ($sx+1);
-	// 		$dex = ($ex+1);
-	// 		echo $dex."<br>";
-	// 		//imageline($im, $dsx, $sy, $dex, $ey, $color);
-	// 		if ($r == ($tens/2) || $r == $tens ){
-	// 			$ey = ($footY-10);
-	// 		}
-	// 		$sx = ($sx + $partPx);
-	// 		$ex = ($ex + $partPx);	
-	// 	}
-
-	// 	if($dex < 800){
-	// 		$dex = $ex + $lastPartPx;
-	// 	}
-
-	// 	// imageline($im, 20, $footY, $dex, $footY, $color);
-	// 	// imageline($im, 20, $footY+1, $dex, $footY+1, $color);
-
-
-	// 	// imageline($im, 20, $cgLineY, $dex, $cgLineY, $color);
-	// 	// imageline($im, 20, $cgLineY+1, $dex, $cgLineY+1, $color);
-	// echo $lastPartPx;
-	// exit;
-	/////////////
 	function xLine($im, $sx,$ex,$sy,$ey,$color){
 		imageline($im, $sx, $sy, $ex, $ey, $color);
 		$sx++;
