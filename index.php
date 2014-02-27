@@ -186,7 +186,7 @@ if(!isset($_POST['UFS'])){
 
 	function SLine($im, $ll, $r){
 		global $font,$length,$sLineY;
-		$sx = 20;
+		$dsx = 20;
 		$partNum = ($length/100);
 		$partPx = (($ll-20)/$partNum)/100;
 
@@ -201,7 +201,7 @@ if(!isset($_POST['UFS'])){
 
 		$slength = mb_strlen($_POST['s-line-'.$r], 'utf-8');
 		$startPx = strpos($_POST['UFS'],$_POST['s-line-'.$r],0);
-		$sx = $partPx * $startPx;
+		$sx = $dsx + ($partPx * $startPx);
 		$ex = $sx + ($slength * $partPx);
 
 		imageline($im, $sx, $sLineY, $ex, $sLineY, $color[$r]);
